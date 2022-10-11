@@ -237,15 +237,13 @@ const Home = () => {
 
 				<div className="locations_cards">
 					{locationsData.map((ld) => (
-						<div className="card">
+						<Link to={`/details/${ld.id}`} className="card link">
 							<div className="img_carusal">
 								<ImgCarusal slides={ld.images} />
 							</div>
 
 							<div className="heading">
-								<Link to={`/details/${ld.id}`} className="name">
-									{ld.name}
-								</Link>
+								<div className="name">{ld.name}</div>
 								<div className="reviews">
 									<AiFillStar className="star_icon" />
 									{ld.reviews}
@@ -259,7 +257,7 @@ const Home = () => {
 							<div className="price">
 								<span>{ld.price}</span> total
 							</div>
-						</div>
+						</Link>
 					))}
 				</div>
 			</div>

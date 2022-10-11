@@ -179,12 +179,17 @@
 
 					.name {
 						font-size: 15px;
+						text-decoration: none;
+
+						color: #fff;
 					}
 
 					.reviews {
 						display: flex;
 						align-items: center;
 						gap: 5px;
+						color: #fff;
+						text-decoration: none;
 					}
 				}
 
@@ -192,12 +197,14 @@
 					font-size: 14px;
 					color: rgba(255, 255, 255, 0.8);
 					margin-top: 5px;
+					text-decoration: none;
 				}
 
 				.date {
 					font-size: 14px;
 					color: rgba(255, 255, 255, 0.8);
 					margin-top: 5px;
+					text-decoration: none;
 				}
 
 				.price {
@@ -205,10 +212,12 @@
 					color: rgba(255, 255, 255, 0.8);
 					margin-top: 5px;
 					text-decoration: underline;
+					text-decoration: none;
 
 					span {
 						color: #fff;
 						font-size: 15px;
+						text-decoration: none;
 					}
 				}
 			}
