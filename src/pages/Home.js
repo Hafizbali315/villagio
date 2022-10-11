@@ -242,7 +242,7 @@ const Home = () => {
 								<ImgCarusal slides={ld.images} />
 							</div>
 
-							<Link to={`/details/${ld.id}`}>
+							<Link to={`/details/${ld.id}`} className="link">
 								<div className="heading">
 									<div className="name">{ld.name}</div>
 									<div className="reviews">
