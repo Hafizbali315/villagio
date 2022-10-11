@@ -237,27 +237,29 @@ const Home = () => {
 
 				<div className="locations_cards">
 					{locationsData.map((ld) => (
-						<Link to={`/details/${ld.id}`} className="card link">
+						<div className="card ">
 							<div className="img_carusal">
 								<ImgCarusal slides={ld.images} />
 							</div>
 
-							<div className="heading">
-								<div className="name">{ld.name}</div>
-								<div className="reviews">
-									<AiFillStar className="star_icon" />
-									{ld.reviews}
+							<Link to={`/details/${ld.id}`}>
+								<div className="heading">
+									<div className="name">{ld.name}</div>
+									<div className="reviews">
+										<AiFillStar className="star_icon" />
+										{ld.reviews}
+									</div>
 								</div>
-							</div>
 
-							<div className="host">{ld.host}</div>
+								<div className="host">{ld.host}</div>
 
-							<div className="date">2 - 7 Jan</div>
+								<div className="date">2 - 7 Jan</div>
 
-							<div className="price">
-								<span>{ld.price}</span> total
-							</div>
-						</Link>
+								<div className="price">
+									<span>{ld.price}</span> total
+								</div>
+							</Link>
+						</div>
 					))}
 				</div>
 			</div>
