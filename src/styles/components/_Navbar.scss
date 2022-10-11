@@ -1,0 +1,174 @@
+.navbar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	padding: 40px 50px;
+
+	.navbar_lg {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+
+		ul {
+			list-style: none;
+			display: flex;
+			gap: 25px;
+
+			li {
+				text-transform: uppercase;
+				color: #ffffff;
+				cursor: pointer;
+				font-size: 15px;
+
+				.link {
+					text-decoration: none;
+					color: #ffffff;
+				}
+
+				span {
+					color: #d0660a;
+					font-size: 18px;
+				}
+			}
+		}
+	}
+
+	.logo {
+		position: absolute;
+		font-family: 'MightyDiety';
+
+		.link {
+			font-size: 60px;
+			font-weight: 500;
+			color: #fff;
+			cursor: pointer;
+			text-transform: uppercase;
+		}
+	}
+
+	.hamburger {
+		display: none;
+	}
+
+	.sm_menu {
+		display: none;
+		position: absolute;
+		top: 70px;
+		right: 30px;
+		background: #000;
+		border: 1px solid #fff;
+		border-radius: 20px;
+		padding: 70px 50px;
+		z-index: 9;
+
+		ul {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			gap: 15px;
+
+			li {
+				text-transform: uppercase;
+				color: #ffffff;
+				cursor: pointer;
+				font-size: 14px;
+
+				.link {
+					text-decoration: none;
+					color: #ffffff;
+				}
+
+				span {
+					color: #d0660a;
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}
+
+@include desktop-screen {
+	.navbar {
+		padding: 30px 50px;
+
+		.navbar_lg {
+			ul {
+				gap: 25px;
+
+				li {
+					font-size: 14px;
+
+					span {
+						font-size: 16px;
+					}
+				}
+			}
+		}
+
+		.logo {
+			.link {
+				font-size: 50px;
+			}
+		}
+	}
+}
+
+@include laptop-screen {
+	.navbar {
+		padding: 20px 30px;
+
+		.navbar_lg {
+			ul {
+				gap: 15px;
+
+				li {
+					font-size: 14px;
+
+					span {
+						font-size: 16px;
+					}
+				}
+			}
+		}
+
+		.logo {
+			.link {
+				font-size: 30px;
+			}
+		}
+	}
+}
+
+@include laptop-screen {
+	.navbar {
+		justify-content: space-between;
+
+		.navbar_lg {
+			display: none;
+		}
+
+		.logo {
+			position: relative;
+		}
+
+		.hamburger {
+			display: block;
+
+			.hamburger_icon {
+				font-size: 25px;
+				color: #fff;
+				cursor: pointer;
+			}
+		}
+
+		.sm_menu {
+			display: flex;
+		}
+	}
+}

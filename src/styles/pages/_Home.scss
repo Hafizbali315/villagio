@@ -1,0 +1,381 @@
+.home {
+	.locations {
+		margin: 100px 0;
+		padding: 0 50px;
+
+		.locations_navbar_container {
+			display: flex;
+			align-items: center;
+			position: relative;
+			gap: 30px;
+
+			.location_navbar {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				gap: 50px;
+				overflow-x: scroll;
+				-ms-overflow-style: none; /* IE and Edge */
+				scrollbar-width: none;
+
+				li {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					gap: 15px;
+					cursor: pointer;
+					min-width: 70px;
+
+					span {
+						display: inline-block;
+						overflow: hidden;
+						white-space: nowrap;
+						font-size: 14px;
+					}
+
+					.icon {
+						font-size: 20px;
+					}
+				}
+
+				&::-webkit-scrollbar {
+					display: none;
+				}
+			}
+
+			.left_scroll,
+			.right_scroll {
+				position: absolute;
+				width: 30px;
+				height: 30px;
+				border: 1px solid #fff;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				box-shadow: 0 0 0 5px #000;
+				background: #000;
+				z-index: 99;
+				top: 10px;
+
+				.icon {
+					font-size: 18px;
+					font-weight: bold;
+				}
+			}
+
+			.left_scroll {
+				left: -20px;
+			}
+
+			.right_scroll {
+				right: 110px;
+			}
+
+			button {
+				width: 100px;
+				height: 40px;
+				border: 1px solid #fff;
+				background: transparent;
+				color: #fff;
+				outline: none;
+				display: flex;
+				align-items: center;
+				gap: 7px;
+				justify-content: center;
+				border-radius: 15px;
+			}
+		}
+
+		.locations_cards {
+			display: flex;
+			gap: 4%;
+			flex-wrap: wrap;
+			margin-top: 50px;
+
+			.card {
+				width: 22%;
+
+				.img_carusal {
+					width: 100%;
+					aspect-ratio: 1/1;
+					border-radius: 15px;
+					position: relative;
+
+					img {
+						width: 100%;
+						border-radius: 15px;
+						height: 100%;
+					}
+
+					.left_icon,
+					.right_icon {
+						position: absolute;
+						display: none;
+						top: 50%;
+						transform: translateY(-50%);
+						background: #fff;
+
+						width: 30px;
+						height: 30px;
+						border-radius: 50%;
+						font-size: 16px;
+						color: #000;
+						align-items: center;
+						justify-content: center;
+						cursor: pointer;
+					}
+					.right_icon {
+						right: 15px;
+					}
+
+					.left_icon {
+						left: 15px;
+					}
+
+					.dot_container {
+						position: absolute;
+						bottom: 20px;
+						width: 100%;
+						display: none;
+						gap: 4px;
+						align-items: center;
+						justify-content: center;
+
+						.dot_style {
+							cursor: pointer;
+							width: 7px;
+							height: 7px;
+							background: rgb(197, 193, 193);
+							border-radius: 50%;
+
+							.active {
+								background: #fff;
+							}
+						}
+					}
+
+					&:hover {
+						.dot_container {
+							display: flex;
+						}
+
+						.left_icon {
+							display: flex;
+						}
+
+						.right_icon {
+							display: flex;
+						}
+					}
+				}
+
+				.heading {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					margin-top: 10px;
+
+					.name {
+						font-size: 15px;
+					}
+
+					.reviews {
+						display: flex;
+						align-items: center;
+						gap: 5px;
+					}
+				}
+
+				.host {
+					font-size: 14px;
+					color: rgba(255, 255, 255, 0.8);
+					margin-top: 5px;
+				}
+
+				.date {
+					font-size: 14px;
+					color: rgba(255, 255, 255, 0.8);
+					margin-top: 5px;
+				}
+
+				.price {
+					font-size: 14px;
+					color: rgba(255, 255, 255, 0.8);
+					margin-top: 5px;
+					text-decoration: underline;
+
+					span {
+						color: #fff;
+						font-size: 15px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@include tablet-screen {
+	.home {
+		.locations {
+			padding: 0 30px;
+
+			.locations_navbar_container {
+				gap: 20px;
+
+				.location_navbar {
+					gap: 30px;
+
+					li {
+						gap: 15px;
+						min-width: 70px;
+
+						span {
+							font-size: 12px;
+						}
+
+						.icon {
+							font-size: 18px;
+						}
+					}
+				}
+
+				button {
+					width: 80px;
+					height: 40px;
+				}
+			}
+
+			.locations_cards {
+				gap: 4%;
+				flex-wrap: wrap;
+				margin-top: 50px;
+
+				.card {
+					width: 48%;
+					margin-top: 5%;
+
+					&::last-child {
+						margin-right: 100px;
+					}
+
+					.img_carusal {
+						width: 100%;
+						aspect-ratio: 1/1;
+						border-radius: 15px;
+						position: relative;
+
+						img {
+							width: 100%;
+							border-radius: 15px;
+							height: 100%;
+						}
+
+						.left_icon,
+						.right_icon {
+							position: absolute;
+							display: none;
+							top: 50%;
+							transform: translateY(-50%);
+							background: #fff;
+
+							width: 30px;
+							height: 30px;
+							border-radius: 50%;
+							font-size: 16px;
+							color: #000;
+							align-items: center;
+							justify-content: center;
+							cursor: pointer;
+						}
+						.right_icon {
+							right: 15px;
+						}
+
+						.left_icon {
+							left: 15px;
+						}
+
+						.dot_container {
+							position: absolute;
+							bottom: 20px;
+							width: 100%;
+							display: none;
+							gap: 4px;
+							align-items: center;
+							justify-content: center;
+
+							.dot_style {
+								cursor: pointer;
+								width: 7px;
+								height: 7px;
+								background: rgb(197, 193, 193);
+								border-radius: 50%;
+
+								.active {
+									background: #fff;
+								}
+							}
+						}
+
+						&:hover {
+							.dot_container {
+								display: flex;
+							}
+
+							.left_icon {
+								display: flex;
+							}
+
+							.right_icon {
+								display: flex;
+							}
+						}
+					}
+
+					.heading {
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+						margin-top: 10px;
+
+						.name {
+							font-size: 15px;
+						}
+
+						.reviews {
+							display: flex;
+							align-items: center;
+							gap: 5px;
+						}
+					}
+
+					.host {
+						font-size: 14px;
+						color: rgba(255, 255, 255, 0.8);
+						margin-top: 5px;
+					}
+
+					.date {
+						font-size: 14px;
+						color: rgba(255, 255, 255, 0.8);
+						margin-top: 5px;
+					}
+
+					.price {
+						font-size: 14px;
+						color: rgba(255, 255, 255, 0.8);
+						margin-top: 5px;
+						text-decoration: underline;
+
+						span {
+							color: #fff;
+							font-size: 15px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
